@@ -116,7 +116,7 @@ function insertContent(id) {
                 <input
                   type="hidden"
                   name="redirect"
-                  value="https://web3forms.com/success?title=Nous avons reçu votre message&desc=Notre équipe vous répondra dans les 24 heures"
+                  value="https://web3forms.com/success?title=Nous%20avons%20re%C3%A7u%20votre%20message&desc=Notre%20%C3%A9quipe%20vous%20r%C3%A9pondra%20dans%20les%2024%20heures"
                 />
                 <div class="input-labeled">
                 <label>Nom et prénom</label>
