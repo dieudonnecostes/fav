@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fondation Arbre de Vie</title>
+    <meta
+      name="description"
+      content="Ubuntu bw'Abantu k'Ubuntu, L'humanité des humains gratuitement, Humanity of humans for free"
+    />
+    <meta
+      name="keywords"
+      content="fav, arbre de vie, vie, fondation, arbre, Humanity, of humans, for free, burundi, association, initiatives communautaires, développement, développement communautaire, Ubuntu, bw'Abantu, k'Ubuntu, burundi"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./favicon/site.webmanifest" />
+  </head>
+  <body>
+    <nav>
+      <div class="left">
+        <h1 class="large-subtitle">FONDATION ARBRE DE VIE</h1>
+        <p class="p-medium" style="color: rgb(0, 158, 0)">
+          Ubuntu bw'Abantu k'Ubuntu
+        </p>
+        <p class="p-medium" style="color: chocolate">
+          L'humanité des humains gratuitement
+        </p>
+        <p>Humanity of humans for free</p>
+      </div>
+      <img src="./assets/logo.png" alt="Fondation arbre de vie logo" />
+    </nav>
+    <section class="placeholder">
+      <div class="menu">
+        <p class="cursor-pointer" id="home" onclick="insertContent('home')">
+          À propos de nous
+        </p>
+        <p
+          class="cursor-pointer"
+          id="contact"
+          onclick="insertContent('contact')"
+        >
+          Nous contacter
+        </p>
+        <p class="cursor-pointer" id="donate" onclick="insertContent('donate')">
+          Faire un don
+        </p>
+        <p
+          class="cursor-pointer"
+          id="address"
+          onclick="insertContent('address')"
+        >
+          Adresse
+        </p>
+        <p class="cursor-pointer" id="docs" onclick="insertContent('docs')">
+          Documents
+        </p>
+      </div>
+      <div id="content-placeholder" class="content-placeholder"></div>
+    </section>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+    <script>
+      window.onload = function () {
+        document.getElementById("form")?.reset();
+      };
+    </script>
+    <script src="./js/handler.js" defer type="text/javascript"></script>
+  </body>
+</html>
