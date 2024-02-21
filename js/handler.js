@@ -5,7 +5,21 @@ function insertContent(id) {
     if (placeholder) {
         switch (id) {
             case 'home':
-                placeholder.innerHTML = `<h1 class="large-subtitle">Promotion et valorisation de l'environnement dans le bassin du Congo<br/><p class="p-medium">Promotion and preservation of the environment in the Congo Basin</p> <br/>Projets de développement durable pour l'intégration socio-économique dans la région des Grands Lacs<br/><p class="p-medium">Sustainable development projects for socio-economic integration in the Great Lakes region</p></h1>`;
+                placeholder.innerHTML = `
+                    <div class="map-address">
+                    <div>
+                    <h1 class="large-subtitle">Promotion et valorisation de l'environnement dans le bassin du Congo</h1>
+                    <p class="p-medium"><i>Promotion ${"and"} preservation of the environment ${"in"} the Congo Basin</i></p>
+                    </div>
+                    <p>Le bassin du Congo est le deuxième plus grand bassin fluvial au monde après l'Amazonie, abritant une diversité remarquable d'espèces de biodiversité. Il s'agit de l'habitat d'une part importante de la forêt tropicale, couvrant une vaste zone partagée par 10 pays d'Afrique centrale. Selon certaines études, ces forêts abritent également un patrimoine génétique impressionnant d'espèces végétales et animales La région a connu une effervescence de créations d'aires protégées dans les années 1990, comptant aujourd'hui 206 réserves occupant 799 000 kilomètres carrés, soit 14,8 % de ses terres et 5 % de la zone économique exclusive marine des pays d'Afrique centrale . Malgré ces efforts, la région est confrontée à une déforestation accélérée et à des conflits liés aux différents usages de la forêt, mettant en péril la biodiversité et la durabilité des ressources naturelles</p>
+                    
+                    <div>
+                    <h1 class="large-subtitle">Projets de développement durable pour l'intégration socio-économique dans la région des Grands Lacs</h1>
+                    <p class="p-medium"><i>Sustainable development projects ${"for"} socio-economic integration ${"in"} the Great Lakes region</i></p>
+                    </div>
+                    <p>La région des Grands Lacs est confrontée à des défis socio-économiques importants, mais des projets de développement durable visent à favoriser son intégration socio-économique. Ces projets sont essentiels pour concilier la protection de l'environnement et les enjeux de développement économique dans la région. Ils visent à garantir des solutions durables sur les plans économique et environnemental. En effet, des actions sont nécessaires pour aider les pays de la région à poursuivre un développement vert, résilient et inclusif, leur permettant de conserver leurs ressources naturelles tout en soutenant les moyens de subsistance et en favorisant la diversification économique La population de la région des Grands Lacs, qui compte plus de 250 millions d'habitants, dépend fortement des ressources naturelles pour sa subsistance, ce qui souligne l'importance cruciale de ces projets de développement durable pour assurer la durabilité des ressources et la survie de la biodiversité de la région</p>
+                    </div>
+                `;
                 break;
             case 'donate':
                 placeholder.innerHTML = `
@@ -193,7 +207,7 @@ function insertContent(id) {
 }
 
 function highlightMe(id) {
-    for (var idOf of ['home', 'contact', 'donate', 'docs']) {
+    for (var idOf of ['home', 'contact', 'donate', 'address', 'docs']) {
         document.getElementById(idOf).style.textDecoration = "none"
     }
     document.getElementById(id).style.textDecoration = "underline"
