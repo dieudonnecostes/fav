@@ -193,11 +193,11 @@ function insertContent(id) {
                 <div class="single-pv">
                     <div class="card">
                         <div class="pdf-preview">
-                            <iframe src="../assets/docs/PARTNERSHIP-AND-CONSULTANCY-CONTRACT-EN.docx" width="100%" height="100%"></iframe>
+                            <iframe src="../assets/docs/PARTNERSHIP-AND-CONSULTANCY-CONTRACT-EN.pdf" width="100%" height="100%"></iframe>
                         </div>
-                        <button class="open-button" onclick="openPDF('../assets/docs/PARTNERSHIP-AND-CONSULTANCY-CONTRACT-EN.docx')">Ouvrir</button>
+                        <button class="open-button" onclick="openPDF('../assets/docs/PARTNERSHIP-AND-CONSULTANCY-CONTRACT-EN.pdf')">Ouvrir</button>
                     </div>
-                    <p class="single-pv-subtitle">Partnership Contract</p>
+                    <p class="single-pv-subtitle">Partnership and Consultancy Contract</p>
                 </div>                  
             </div>`;
                 break;
