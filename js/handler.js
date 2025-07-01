@@ -189,7 +189,16 @@ function insertContent(id) {
                         <button class="open-button" onclick="openPDF('../assets/docs/F92 FAV (1).jpg')">Ouvrir</button>
                     </div>
                     <p class="single-pv-subtitle">F92</p>
-                </div>                                               
+                </div>    
+                <div class="single-pv">
+                    <div class="card">
+                        <div class="pdf-preview">
+                            <iframe src="../assets/docs/PARTNERSHIP-AND-CONSULTANCY-CONTRACT-EN.docx" width="100%" height="100%"></iframe>
+                        </div>
+                        <button class="open-button" onclick="openPDF('../assets/docs/PARTNERSHIP-AND-CONSULTANCY-CONTRACT-EN.docx')">Ouvrir</button>
+                    </div>
+                    <p class="single-pv-subtitle">Partnership Contract</p>
+                </div>                  
             </div>`;
                 break;
             case 'address':
