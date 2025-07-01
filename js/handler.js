@@ -198,6 +198,15 @@ function insertContent(id) {
                         <button class="open-button" onclick="openPDF('../assets/docs/PARTNERSHIP-AND-CONSULTANCY-CONTRACT-EN.pdf')">Ouvrir</button>
                     </div>
                     <p class="single-pv-subtitle">Partnership and Consultancy Contract</p>
+                </div>               
+                <div class="single-pv">
+                    <div class="card">
+                        <div class="pdf-preview">
+                            <iframe src="../assets/docs/ARAUJO-SANTOS.pdf" width="100%" height="100%"></iframe>
+                        </div>
+                        <button class="open-button" onclick="openPDF('../assets/docs/ARAUJO-SANTOS.pdf')">Ouvrir</button>
+                    </div>
+                    <p class="single-pv-subtitle">INVOICE - ARAUJO SANTOS</p>
                 </div>                  
             </div>`;
                 break;
