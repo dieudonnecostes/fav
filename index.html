@@ -1,85 +1,493 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fondation Arbre de Vie</title>
-    <meta
-      name="description"
-      content="Ubuntu bw'Abantu k'Ubuntu, L'humanité des humains gratuitement, Humanity of humans for free"
-    />
-    <meta
-      name="keywords"
-      content="fav, arbre de vie, vie, fondation, arbre, Humanity, of humans, for free, burundi, association, initiatives communautaires, développement, développement communautaire, Ubuntu, bw'Abantu, k'Ubuntu, burundi"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="./favicon/favicon-16x16.png"
-    />
-    <link rel="manifest" href="./favicon/site.webmanifest" />
-  </head>
-  <body>
-    <nav>
-      <div class="left">
-        <h1 class="large-subtitle">FONDATION ARBRE DE VIE</h1>
-        <p class="p-medium" style="color: rgb(0, 158, 0)">
-          Ubuntu bw'Abantu k'Ubuntu
-        </p>
-        <p class="p-medium" style="color: chocolate">
-          L'humanité des humains gratuitement
-        </p>
-        <p>Humanity of humans for free</p>
-      </div>
-      <img src="./assets/logo.png" alt="Fondation arbre de vie logo" />
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fondation Arbre de Vie — Ubuntu bw'Abantu k'Ubuntu</title>
+  <meta name="description" content="Fondation Arbre de Vie — Protéger le Bassin du Congo et développer durablement la région des Grands Lacs. L'humanité des humains gratuitement." />
+  <meta name="keywords" content="FAV, Arbre de Vie, Fondation, Burundi, Congo, Grands Lacs, environnement, développement durable, Ubuntu, Afrique centrale, don, NGO" />
+  <meta property="og:title" content="Fondation Arbre de Vie" />
+  <meta property="og:description" content="L'humanité au service de la nature — Protéger le Bassin du Congo, développer les Grands Lacs." />
+  <meta property="og:image" content="./assets/shutterstock_2257722161_komp.jpg" />
+  <meta property="og:type" content="website" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png" />
+  <link rel="manifest" href="./favicon/site.webmanifest" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════ NAVBAR ═══════════════════ -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-brand">
+        <img src="./assets/logo.png" alt="Fondation Arbre de Vie" class="nav-logo" />
+        <div class="nav-brand-text">
+          <span class="nav-name">Fondation Arbre de Vie</span>
+          <span class="nav-slogan">Ubuntu bw'Abantu k'Ubuntu</span>
+        </div>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" class="nav-link">À propos</a></li>
+        <li><a href="#programs" class="nav-link">Programmes</a></li>
+        <li><a href="#impact" class="nav-link">Impact</a></li>
+        <li><a href="#documents" class="nav-link">Documents</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="#donate" class="nav-btn">Faire un don</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span class="ham-bar"></span>
+        <span class="ham-bar"></span>
+        <span class="ham-bar"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-overlay" id="mobile-overlay"></div>
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <button class="mobile-close" id="mobile-close" aria-label="Fermer le menu">✕</button>
+    <nav class="mobile-nav">
+      <a href="#about" class="mobile-link">À propos</a>
+      <a href="#programs" class="mobile-link">Programmes</a>
+      <a href="#impact" class="mobile-link">Impact</a>
+      <a href="#documents" class="mobile-link">Documents</a>
+      <a href="#contact" class="mobile-link">Contact</a>
+      <a href="#donate" class="mobile-donate">Faire un don</a>
     </nav>
-    <section class="placeholder">
-      <div class="menu">
-        <p class="cursor-pointer" id="home" onclick="insertContent('home')">
-          À propos de nous
-        </p>
-        <p
-          class="cursor-pointer"
-          id="contact"
-          onclick="insertContent('contact')"
-        >
-          Nous contacter
-        </p>
-        <p class="cursor-pointer" id="donate" onclick="insertContent('donate')">
-          Faire un don
-        </p>
-        <p
-          class="cursor-pointer"
-          id="address"
-          onclick="insertContent('address')"
-        >
-          Adresse
-        </p>
-        <p class="cursor-pointer" id="docs" onclick="insertContent('docs')">
-          Documents
-        </p>
+    <div class="mobile-footer-text">
+      <p>L'humanité des humains gratuitement</p>
+      <p>Humanity of humans for free</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ HERO ═══════════════════ -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span>Ubuntu bw'Abantu k'Ubuntu</span>
       </div>
-      <div id="content-placeholder" class="content-placeholder"></div>
-    </section>
-    <script src="https://web3forms.com/client/script.js" async defer></script>
-    <script>
-      window.onload = function () {
-        document.getElementById("form")?.reset();
-      };
-    </script>
-    <script src="./js/handler.js" defer type="text/javascript"></script>
-  </body>
+      <h1 class="hero-title">L'humanité au service<br>de <em>la nature</em></h1>
+      <p class="hero-subtitle">Protéger le Bassin du Congo. Développer les Grands Lacs.<br class="br-desktop" />Bâtir un avenir durable pour les générations futures d'Afrique centrale.</p>
+      <div class="hero-ctas">
+        <a href="#donate" class="btn-primary">
+          <span>Faire un don</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#about" class="btn-ghost">Découvrir notre mission</a>
+      </div>
+    </div>
+    <a href="#about" class="hero-scroll-hint" aria-label="Défiler vers le bas">
+      <div class="scroll-dot"></div>
+    </a>
+  </section>
+
+  <!-- ═══════════════════ ABOUT ═══════════════════ -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-content">
+          <p class="section-eyebrow fade-in">Notre Mission</p>
+          <h2 class="section-heading fade-in">Protéger, Développer,<br>Unir l'Afrique centrale</h2>
+          <p class="section-body fade-in">La Fondation Arbre de Vie œuvre pour la promotion et la valorisation de l'environnement dans le Bassin du Congo — le deuxième plus grand bassin fluvial au monde après l'Amazonie, abritant une biodiversité remarquable partagée par 10 pays d'Afrique centrale.</p>
+          <p class="section-body fade-in">Fondée sur le principe <strong>Ubuntu</strong> — <em>«l'humanité des humains gratuitement»</em> — nous croyons que la protection de l'environnement et le développement humain sont profondément indissociables.</p>
+          <div class="values-list">
+            <div class="value-card fade-in">
+              <div class="value-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <div>
+                <h4>Environnement</h4>
+                <p>Protection de la biodiversité du Bassin du Congo et des 206 réserves naturelles protégées</p>
+              </div>
+            </div>
+            <div class="value-card fade-in">
+              <div class="value-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <div>
+                <h4>Communauté</h4>
+                <p>Intégration socio-économique inclusive de 250+ millions d'habitants des Grands Lacs</p>
+              </div>
+            </div>
+            <div class="value-card fade-in">
+              <div class="value-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              </div>
+              <div>
+                <h4>Durabilité</h4>
+                <p>Solutions économiques et environnementales durables pour les générations futures</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-visual fade-in">
+          <div class="about-img-wrap">
+            <img src="./assets/copyright_fiona_maisels_wcs_-_aerial_view_of_the_forests_of_salonga_national_park_drc.jpg" alt="Vue aérienne des forêts du Parc National de la Salonga, RDC" loading="lazy" />
+          </div>
+          <p class="about-photo-caption">Vue aérienne du Parc National de la Salonga, RDC<br><em>© Fiona Maisels / WCS</em></p>
+          <div class="about-stat-badge">
+            <span class="badge-num">14,8%</span>
+            <span class="badge-label">des terres d'Afrique centrale protégées</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ IMPACT ═══════════════════ -->
+  <section id="impact" class="section section-forest">
+    <div class="container">
+      <div class="text-center fade-in">
+        <p class="section-eyebrow light">Notre Impact</p>
+        <h2 class="section-heading light">Des chiffres qui parlent d'eux-mêmes</h2>
+        <p class="section-subhead light">Chaque réserve protégée, chaque communauté soutenue, chaque forêt préservée est une victoire pour l'Afrique et la planète.</p>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card fade-in">
+          <span class="stat-num" data-count="206">0</span>
+          <p class="stat-desc">Réserves naturelles protégées en Afrique centrale</p>
+        </div>
+        <div class="stat-card fade-in">
+          <span class="stat-num" data-count="10">0</span>
+          <p class="stat-desc">Pays d'Afrique centrale couverts par nos programmes</p>
+        </div>
+        <div class="stat-card fade-in">
+          <span class="stat-num stat-static">799 000</span>
+          <span class="stat-unit">km²</span>
+          <p class="stat-desc">De terres protégées dans le Bassin du Congo</p>
+        </div>
+        <div class="stat-card fade-in">
+          <span class="stat-num" data-count="250">0</span>
+          <span class="stat-unit">M+</span>
+          <p class="stat-desc">D'habitants dans la région des Grands Lacs</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ PROGRAMS ═══════════════════ -->
+  <section id="programs" class="section section-light">
+    <div class="container">
+      <div class="text-center fade-in">
+        <p class="section-eyebrow">Nos Programmes</p>
+        <h2 class="section-heading">Deux axes d'action majeurs</h2>
+        <p class="section-subhead">Nous intervenons sur deux fronts complémentaires pour un impact maximal au cœur de l'Afrique centrale.</p>
+      </div>
+      <div class="programs-grid">
+        <div class="program-card fade-in">
+          <div class="program-img-wrap">
+            <img src="./assets/copyright_fiona_maisels_wcs_-_aerial_view_of_the_forests_of_salonga_national_park_drc.jpg" alt="Forêts du Bassin du Congo" loading="lazy" />
+            <span class="program-badge">Environnement</span>
+          </div>
+          <div class="program-body">
+            <h3>Bassin du Congo</h3>
+            <p>Promotion et valorisation de l'environnement dans le deuxième plus grand bassin fluvial au monde, couvrant 10 pays d'Afrique centrale avec une biodiversité remarquable et un patrimoine génétique d'une valeur inestimable.</p>
+            <ul class="program-list">
+              <li>Protection de 206 réserves naturelles</li>
+              <li>Lutte contre la déforestation accélérée</li>
+              <li>Préservation de la biodiversité et du patrimoine génétique</li>
+              <li>Gestion des conflits d'usage forestier</li>
+            </ul>
+          </div>
+        </div>
+        <div class="program-card fade-in">
+          <div class="program-img-wrap">
+            <img src="./assets/shutterstock_2257722161_komp.jpg" alt="Région des Grands Lacs" loading="lazy" />
+            <span class="program-badge program-badge-gold">Développement</span>
+          </div>
+          <div class="program-body">
+            <h3>Région des Grands Lacs</h3>
+            <p>Projets de développement durable pour l'intégration socio-économique de la région, conciliant protection environnementale et développement économique inclusif pour 250 millions d'habitants qui dépendent des ressources naturelles.</p>
+            <ul class="program-list">
+              <li>Développement vert, résilient et inclusif</li>
+              <li>Conservation des ressources naturelles locales</li>
+              <li>Soutien aux moyens de subsistance des communautés</li>
+              <li>Diversification économique durable</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ GALLERY STRIP ═══════════════════ -->
+  <section class="gallery-strip">
+    <div class="gallery-item" style="background-image:url('./assets/shutterstock_2257722161_komp.jpg')"></div>
+    <div class="gallery-item" style="background-image:url('./assets/copyright_fiona_maisels_wcs_-_aerial_view_of_the_forests_of_salonga_national_park_drc.jpg')"></div>
+    <div class="gallery-item" style="background-image:url('./assets/c6bdf0_52eca3f4e41d43719e90b2cb8ffa6b66~mv2.jpg')"></div>
+    <div class="gallery-item" style="background-image:url('./assets/shutterstock_2257722161_komp.jpg'); filter: hue-rotate(20deg)"></div>
+  </section>
+
+  <!-- ═══════════════════ DONATE ═══════════════════ -->
+  <section id="donate" class="section section-donate">
+    <div class="container">
+      <div class="donate-hero fade-in">
+        <p class="section-eyebrow light">Soutenez notre cause</p>
+        <h2 class="section-heading light">«Y a plus de joie à donner<br>qu'à recevoir»</h2>
+        <p class="donate-translation">There is more joy in giving than in receiving</p>
+        <p class="donate-desc">Votre don contribue directement à la protection de l'environnement en Afrique centrale et au développement durable des communautés des Grands Lacs. Chaque geste compte.</p>
+      </div>
+      <div class="bank-card-wrap fade-in">
+        <div class="bank-card">
+          <div class="bank-card-header">
+            <div class="bank-header-text">
+              <h3>Informations de virement bancaire</h3>
+              <p>Bank Wire Transfer Details</p>
+            </div>
+            <div class="bank-logo-area">
+              <span class="bank-name-badge">TMB</span>
+              <span class="bank-fullname">Trust Merchant Bank S.A</span>
+            </div>
+          </div>
+          <div class="bank-details">
+            <div class="bank-row">
+              <span class="bank-key">Intitulé / Account Name</span>
+              <span class="bank-val">FONDATION ARBRE DE VIE</span>
+            </div>
+            <div class="bank-row highlight-row">
+              <span class="bank-key">Numéro de compte / Account Number</span>
+              <span class="bank-val mono">00017-25300-07316030001-90</span>
+            </div>
+            <div class="bank-row">
+              <span class="bank-key">Ancien format / Old Format</span>
+              <span class="bank-val mono">1231-0731603-00-37 / USD</span>
+            </div>
+            <div class="bank-row">
+              <span class="bank-key">Devise / Currency</span>
+              <span class="bank-val">Dollar Américain / US Dollar</span>
+            </div>
+            <div class="bank-row">
+              <span class="bank-key">Banque / Bank Name</span>
+              <span class="bank-val">Trust Merchant Bank S.A</span>
+            </div>
+            <div class="bank-row highlight-row">
+              <span class="bank-key">Code SWIFT</span>
+              <span class="bank-val mono">TRMSCD3L</span>
+            </div>
+            <div class="bank-row">
+              <span class="bank-key">Adresse banque / Bank Address</span>
+              <span class="bank-val">26 Avenue Lumumba, Kalemie, Congo RD</span>
+            </div>
+            <div class="bank-row">
+              <span class="bank-key">Email banque</span>
+              <span class="bank-val">tmb@tmb.cd</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ DOCUMENTS ═══════════════════ -->
+  <section id="documents" class="section">
+    <div class="container">
+      <div class="text-center fade-in">
+        <p class="section-eyebrow">Transparence & Légitimité</p>
+        <h2 class="section-heading">Nos Documents officiels</h2>
+        <p class="section-subhead">Dans un esprit de totale transparence, nous rendons accessibles tous nos documents officiels pour renforcer la confiance de nos partenaires et donateurs.</p>
+      </div>
+      <div class="docs-grid">
+        <div class="doc-card fade-in" onclick="window.open('./assets/docs/acte notarie.pdf', '_blank')" role="button" tabindex="0">
+          <div class="doc-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <div class="doc-info">
+            <h4>Acte Notarié</h4>
+            <p>Document légal de création</p>
+          </div>
+          <div class="doc-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div>
+        </div>
+        <div class="doc-card fade-in" onclick="window.open('./assets/docs/STATUTS Fondation Arbre de Vie.pdf', '_blank')" role="button" tabindex="0">
+          <div class="doc-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <div class="doc-info">
+            <h4>Statuts</h4>
+            <p>Statuts officiels de la Fondation</p>
+          </div>
+          <div class="doc-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div>
+        </div>
+        <div class="doc-card fade-in" onclick="window.open('./assets/docs/province kivu.pdf', '_blank')" role="button" tabindex="0">
+          <div class="doc-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <div class="doc-info">
+            <h4>Autorisation de fonctionnement</h4>
+            <p>Province du Kivu</p>
+          </div>
+          <div class="doc-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div>
+        </div>
+        <div class="doc-card fade-in" onclick="window.open('./assets/docs/cerificat de depot.pdf', '_blank')" role="button" tabindex="0">
+          <div class="doc-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <div class="doc-info">
+            <h4>Certificat de dépôt</h4>
+            <p>Certification officielle</p>
+          </div>
+          <div class="doc-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div>
+        </div>
+        <div class="doc-card fade-in" onclick="window.open('./assets/docs/Sans titre-3.pdf', '_blank')" role="button" tabindex="0">
+          <div class="doc-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <div class="doc-info">
+            <h4>Convention de développement</h4>
+            <p>Partenariat et coopération</p>
+          </div>
+          <div class="doc-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div>
+        </div>
+        <div class="doc-card fade-in" onclick="window.open('./assets/docs/Note de Perception.pdf', '_blank')" role="button" tabindex="0">
+          <div class="doc-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <div class="doc-info">
+            <h4>Note de Perception</h4>
+            <p>Document financier</p>
+          </div>
+          <div class="doc-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div>
+        </div>
+        <div class="doc-card fade-in" onclick="window.open('./assets/docs/PARTNERSHIP-AND-CONSULTANCY-CONTRACT-EN.pdf', '_blank')" role="button" tabindex="0">
+          <div class="doc-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <div class="doc-info">
+            <h4>Partnership Contract</h4>
+            <p>Consultancy Agreement (EN)</p>
+          </div>
+          <div class="doc-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div>
+        </div>
+        <div class="doc-card fade-in" onclick="window.open('./assets/docs/ARAUJO-SANTOS.pdf', '_blank')" role="button" tabindex="0">
+          <div class="doc-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <div class="doc-info">
+            <h4>Invoice — ARAUJO SANTOS</h4>
+            <p>Document comptable</p>
+          </div>
+          <div class="doc-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div>
+        </div>
+        <div class="doc-card fade-in" onclick="window.open('./assets/docs/carte d\'electeur.pdf', '_blank')" role="button" tabindex="0">
+          <div class="doc-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+          </div>
+          <div class="doc-info">
+            <h4>Carte d'électeur</h4>
+            <p>Pièce d'identité officielle</p>
+          </div>
+          <div class="doc-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div>
+        </div>
+        <div class="doc-card fade-in" onclick="window.open('./assets/docs/F92 FAV (1).jpg', '_blank')" role="button" tabindex="0">
+          <div class="doc-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          </div>
+          <div class="doc-info">
+            <h4>Formulaire F92</h4>
+            <p>Document administratif</p>
+          </div>
+          <div class="doc-open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ CONTACT ═══════════════════ -->
+  <section id="contact" class="section section-light">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-left fade-in">
+          <p class="section-eyebrow">Contactez-nous</p>
+          <h2 class="section-heading">Travaillons ensemble pour un avenir meilleur</h2>
+          <p class="contact-intro">Que vous souhaitiez collaborer, faire un don ou simplement en savoir plus sur nos actions, notre équipe vous répondra dans les 24 heures.</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <h5>Adresse</h5>
+                <p>19, Avenue Muha, Kinanira II<br>Bujumbura-Mairie, Burundi</p>
+              </div>
+            </div>
+          </div>
+          <div class="map-wrap">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.806912413956!2d29.359626011177085!3d-3.39724844156427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19c1832f9b0227cb%3A0xddd4b8c0a485e7f1!2sAve%20de%20Muha%2C%20Bujumbura%2C%20Burundi!5e0!3m2!1sfr!2sfr!4v1708531691203!5m2!1sfr!2sfr" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Localisation de la Fondation Arbre de Vie"></iframe>
+          </div>
+        </div>
+        <div class="contact-right fade-in">
+          <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="016130b3-769f-4102-bf29-2540a90d6a8a" />
+            <input type="hidden" name="subject" value="Message pour la Fondation Arbre de Vie" />
+            <input type="hidden" name="redirect" value="https://web3forms.com/success?title=Nous%20avons%20re%C3%A7u%20votre%20message&desc=Notre%20%C3%A9quipe%20vous%20r%C3%A9pondra%20dans%20les%2024%20heures" />
+            <h3 class="form-title">Envoyez-nous un message</h3>
+            <div class="form-group">
+              <label for="name">Nom et prénom <span>*</span></label>
+              <input id="name" type="text" name="name" placeholder="Jean Dupont" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Adresse email <span>*</span></label>
+              <input id="email" type="email" name="email" placeholder="jean@exemple.com" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message <span>*</span></label>
+              <textarea id="message" name="message" placeholder="Comment pouvons-nous vous aider ?" rows="5" required></textarea>
+            </div>
+            <div class="h-captcha" data-captcha="true"></div>
+            <button type="submit" class="form-submit">
+              Envoyer le message
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9l20-7z"/></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ FOOTER ═══════════════════ -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="./assets/logo.png" alt="Fondation Arbre de Vie" class="footer-logo" />
+          <h3>Fondation Arbre de Vie</h3>
+          <p class="footer-motto">Ubuntu bw'Abantu k'Ubuntu</p>
+          <p class="footer-motto-fr">L'humanité des humains gratuitement</p>
+          <p class="footer-motto-en">Humanity of humans for free</p>
+        </div>
+        <div class="footer-nav">
+          <h4>Navigation</h4>
+          <a href="#about">À propos</a>
+          <a href="#programs">Programmes</a>
+          <a href="#impact">Impact</a>
+          <a href="#documents">Documents</a>
+          <a href="#contact">Contact</a>
+          <a href="#donate">Faire un don</a>
+        </div>
+        <div class="footer-contact-info">
+          <h4>Adresse</h4>
+          <p>19, Avenue Muha</p>
+          <p>Kinanira II</p>
+          <p>Bujumbura-Mairie</p>
+          <p>Burundi</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Fondation Arbre de Vie. Tous droits réservés.</p>
+        <p class="footer-tagline">Construire un avenir durable pour l'Afrique centrale</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://web3forms.com/client/script.js" async defer></script>
+  <script src="./js/handler.js" defer></script>
+</body>
 </html>
