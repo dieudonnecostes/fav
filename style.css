@@ -1190,6 +1190,13 @@ footer {
   color: rgba(255,255,255,0.58);
   line-height: 1.8;
 }
+.footer-office-label {
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gold) !important;
+}
 
 .footer-bottom {
   padding: 1.35rem 0;
