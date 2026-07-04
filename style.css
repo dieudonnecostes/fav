@@ -809,6 +809,7 @@ button     { font-family: 'Inter', sans-serif; }
 .stripe-green { background: linear-gradient(90deg, var(--green-900), var(--green-700)); }
 .stripe-teal  { background: linear-gradient(90deg, var(--green-700), var(--green-500)); }
 .stripe-gold  { background: linear-gradient(90deg, var(--gold-dark), var(--gold)); }
+.stripe-sage  { background: linear-gradient(90deg, var(--green-500), var(--green-200)); }
 
 .team-avatar {
   width: 5.5rem; height: 5.5rem;
@@ -830,6 +831,7 @@ button     { font-family: 'Inter', sans-serif; }
 .avatar-green { background: linear-gradient(135deg, var(--green-900), var(--green-700)); box-shadow: 0 6px 20px rgba(27,67,50,0.35); }
 .avatar-teal  { background: linear-gradient(135deg, var(--green-700), var(--green-500)); box-shadow: 0 6px 20px rgba(64,145,108,0.35); }
 .avatar-gold  { background: linear-gradient(135deg, var(--gold-dark), var(--gold));      box-shadow: 0 6px 20px rgba(201,162,39,0.4); }
+.avatar-sage  { background: linear-gradient(135deg, var(--green-500), var(--green-200));  box-shadow: 0 6px 20px rgba(82,183,136,0.35); }
 
 .team-info { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; }
 
